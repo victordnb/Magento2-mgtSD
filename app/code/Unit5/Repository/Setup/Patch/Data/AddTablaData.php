@@ -1,10 +1,13 @@
 <?php
-
+/**
+ * Copyright © Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
 namespace Unit5\Repository\Setup\Patch\Data;
 
-use Magento\Framework\Setup\Patch\DataPatchInterface; 
+use Magento\Framework\Setup\Patch\DataPatchInterface;
 use Magento\Eav\Setup\EavSetupFactory;
-use Magento\Framwork\Setup\ModuleDataSetupInterface;
+use Magento\Framework\Setup\ModuleDataSetupInterface;
 
 class AddTableData implements DataPatchInterface
 {
@@ -31,11 +34,21 @@ class AddTableData implements DataPatchInterface
         );
     }
 
+    /**
+     * getAliases
+     *
+     * @return void
+     */
     public function getAliases()
     {
         return [];
     }
 
+    /**
+     * getDependencies
+     *
+     * @return void
+     */
     public static function getDependencies()
     {
         return [];
