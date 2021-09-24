@@ -35,7 +35,6 @@ class Customer extends Action
     //  when the customer controller is called
     public function execute()
     {
-        // get the customer list from the customer repository
         $this->getResponse()->setHeader('content-type', 'text/plain');
         $this->addEmailFilter();
         $this->addNameFilter();
@@ -44,10 +43,10 @@ class Customer extends Action
             $this->getResponse()->appendBody(
                 sprintf("List contains %s\n\n", get_class($customers[0]))
             );
+
             $result = $this->resultFactory->create(\Magento\Framework\Controller\ResultFactory::TYPE_RAW);
             $result->setContents('Hello World!');
         }
-        
         foreach ($customers as $customer) {
             $this->outputCustomer($customer);
         }
@@ -71,6 +70,7 @@ class Customer extends Action
             ->setConditionType('eq')
             ->create();
         $this->filterGroupBuilder->addFilter($nameFilter);
+    }
 
     // this is the method that gets the customer list from the customer repository
     private function getCustomersFromRepository()
