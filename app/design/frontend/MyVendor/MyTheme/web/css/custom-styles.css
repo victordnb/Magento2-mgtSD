@@ -1,0 +1,14 @@
+/*this is the custom stylesheet for the site*/
+
+.page-header {
+display:none; 
+}
+
+#maincontent {
+    background-color: #5dafab;
+    
+}
+
+#ui-id-1 {
+    background-color: lightpink;
+}

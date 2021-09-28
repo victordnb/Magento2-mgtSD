@@ -1,0 +1,10 @@
+<page layout="4columns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd"
+>
+        <body>
+                <referenceContainer name="div.sidebar.four">
+                        <block class="Magento\Framework\View\Element\Template" name="4columns-test"
+                        template="Magento_Catalog::extra-content.phtml"/>
+                </referenceContainer>
+        </body>
+</page>
